@@ -13,6 +13,7 @@ import { PageHomeComponent } from './page-home/page-home.component';
 import { ColorsDirective } from './directives/colors.directive';
 import { BallComponent } from './bingo/ball/ball.component';
 import { PlayComponent } from './bingo/play/play.component';
+import { CpainelComponent } from './cpainel/cpainel.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { PlayComponent } from './bingo/play/play.component';
     PageHomeComponent,
     ColorsDirective,
     BallComponent,
-    PlayComponent
+    PlayComponent,
+    CpainelComponent
   ],
   imports: [
     BrowserModule,
