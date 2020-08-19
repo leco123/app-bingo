@@ -1,6 +1,10 @@
+.header{
+    
+}
 .filler {
     flex: 1 1 auto;
  }
 .gap {
     margin-right: 10px;
  }
+ .nome-usuario{font-size:12px;}

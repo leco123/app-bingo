@@ -4,8 +4,12 @@
 
     display: flex;
     justify-content: flex-end;
+    
 }
 .footer  span{
     font-size: 12px;
     font-weight: 300;
+}
+.v-middle{
+    vertical-align: middle;
 }
