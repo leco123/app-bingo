@@ -1,15 +1,21 @@
 
 <mat-toolbar class="header mat-elevation-z4">
-    <span>
+    <span class="filler">
         <a routerLink="/">
             <img class="Bingo" src="assets/bingo-logo.png" alt="Bingo" width="115">
         </a>
     </span>
-    <span class="title-group">
-        <a>
-            <i class="material-icons" appColors> games </i>
-            Início
-        </a>
-        
-    </span>
+    <button class="gap" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+        <mat-icon>account_circle</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+          <mat-icon>assignment_ind</mat-icon>
+          <span>Meus Dados</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>notifications_off</mat-icon>
+          <span>Desabilitar Alertas</span>
+        </button>
+      </mat-menu>
 </mat-toolbar>

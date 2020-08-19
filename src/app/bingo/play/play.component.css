@@ -1,0 +1,36 @@
+.num-concurso{
+    background: #004E99;
+    box-shadow: 4px 7px 9px -36px rgba(0,0,0,0.4);
+    color: #FFF;
+    text-align: center;
+}
+
+.mat-card{margin:5px;}
+.list-dezenas{margin:5px;}
+.text-title-globo{text-align: center!important;width: 200%;}
+
+section {}
+  
+  .btn-bingo-label {
+    display: flex;
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+  
+  .btn-bingo-button-row {
+    display: flex;
+  }
+  
+  .btn-bingo-button-row .mat-button-base {
+    margin: 8px 8px 8px 0;
+  }
+  
+  .btn-bingo-flex-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .btn-bingo-button-container {
+    width: 61px;
+  }
+

@@ -1,0 +1,128 @@
+
+<div fxLayout="row">
+
+    <mat-card fxFlex="10" class="num-concurso">
+        
+        <mat-card-header>
+          <mat-card-title>Concurso</mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+            <h1>232</h1>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card fxFlex="25">
+        <mat-card-header>
+          <mat-card-title>Bolas </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <section>
+            <mat-chip-list aria-label="Fish selection">
+                <strong>Total de: </strong><mat-chip>60</mat-chip><strong> bolas com números de 01 até 60</strong>
+            </mat-chip-list>
+          </section>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card fxFlex="25">
+        <mat-card-header>
+          <mat-card-title>Cartelas </mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+          <section>
+            <mat-chip-list aria-label="Fish selection">
+                <strong>Total de: </strong><mat-chip>50</mat-chip><strong> cartelas </strong>
+            </mat-chip-list>
+          </section>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card fxFlex>
+        <mat-card-header>
+          <mat-card-title>Regras </mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+            <h5>O jogo acaba com o primeiro jogador que conseguir acertar as 20 primeiras bolas.</h5>
+            <h5>Data Início: 22/09/2020 ás 19:00</h5>
+        </mat-card-content>
+    </mat-card>
+
+
+</div>
+
+<div fxLayout="row" >
+    <div fxFlex="60">
+        <mat-card class="list-dezenas">
+            <mat-card-header>
+                <mat-card-title>1º Dezena de Números Sorteados</mat-card-title>
+            </mat-card-header>
+            <app-ball></app-ball>
+        </mat-card>
+
+        <mat-card  class="list-dezenas">
+            <mat-card-header>
+                <mat-card-title>2º Dezena de Números Sorteados</mat-card-title>
+            </mat-card-header>
+            <app-ball></app-ball>
+        </mat-card>
+    </div>
+
+    <div fxFlex="15">
+        <mat-card class="list-dezenas">
+            <mat-card-header>
+                <mat-card-title style="text-align:center;">Total de Bolas Lançadas <br><h1>25</h1></mat-card-title>
+                
+            </mat-card-header>
+        </mat-card>
+        
+
+    </div>
+
+
+    <div fxFlex="25">
+
+        <mat-card>
+            <mat-card-header>
+            <mat-card-title class="text-title-globo">Globo da Sorte</mat-card-title>
+            </mat-card-header>
+            <img  src="assets/sorteio.gif" alt="Globo da Sorte" style="margin-left: 12%;">
+            
+            <mat-card-content>
+                <section>
+                    <mat-chip-list aria-label="Fish selection">
+                        <mat-chip>Concurso: 232</mat-chip>
+                    </mat-chip-list>
+                </section>
+                <section>
+                    <div class="btn-bingo-label">Ações</div>
+                    <div class="btn-bingo-button-column">
+                        <div class="btn-bingo-flex-container">
+                        <div class="btn-bingo-button-container">
+                            <button mat-fab color="primary" aria-label="Começar">
+                            <mat-icon>play_circle_filled</mat-icon>
+                            </button>
+                        </div>
+                        <div class="btn-bingo-button-container">
+                            <button mat-fab color="accent" aria-label="Parar">
+                            <mat-icon>pause_circle_filled</mat-icon>
+                            </button>
+                        </div>
+                        <div class="btn-bingo-button-container">
+                            <button mat-fab  color="warn" aria-label="Restaurar">
+                            <mat-icon>replay</mat-icon>
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                </section>
+            
+            </mat-card-content>
+        </mat-card>
+        
+
+    </div>
+</div>
+
