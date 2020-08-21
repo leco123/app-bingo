@@ -2,12 +2,12 @@
     <mat-sidenav class="sidenav" mode="side" opened fixedInViewport="true" 
     fixedTopGap="64">
         <mat-nav-list class="nav-list">
-            <a mat-list-item routerLink="/inicio">
-                <i class="material-icons">home</i>
+            <a mat-list-item routerLink="/inicio"  class="cor-texto">
+                <mat-icon color="primary">home</mat-icon> 
                 Início
             </a>
-            <a mat-list-item routerLink="/bingo/config">
-                <i class="material-icons">settings</i>
+            <a mat-list-item routerLink="/bingo/config" class="cor-texto"> 
+                <mat-icon color="primary">settings</mat-icon> 
                 Configurações
             </a>
 <!--
@@ -32,19 +32,20 @@
                 Casino
             </a>-->
 
-            <a mat-list-item routerLink="/bingo/play">
-                <i class="material-icons">sentiment_satisfied_alt</i>
+            <a mat-list-item routerLink="/bingo/play"  class="cor-texto">
+                <mat-icon color="primary">sentiment_satisfied_alt</mat-icon> 
                 Sorteio
             </a>
 
-            <a mat-list-item routerLink="/notfound-page">
-                <i class="material-icons">warning</i>
+            <a mat-list-item routerLink="/notfound-page"  class="cor-texto">
+                <mat-icon color="primary">warning</mat-icon> 
                 Not Found 404
             </a>
 
-            <button mat-button color="warn" aria-label="Sair">
-                <mat-icon>closely</mat-icon> Sair 
-            </button>
+            <a mat-list-item color="warn" class="cor-texto-sair">
+                <mat-icon color="warn">closely</mat-icon>
+                 Sair 
+            </a>
             
         </mat-nav-list>
     </mat-sidenav>
