@@ -1,7 +1,6 @@
 .footer{
     position: fixed;
     bottom: 0;
-
     display: flex;
     justify-content: flex-end;
     
@@ -9,7 +8,14 @@
 .footer  span{
     font-size: 12px;
     font-weight: 300;
+    display: flex;
+    flex-direction:row;
 }
 .v-middle{
     vertical-align: middle;
 }
+.version{
+    font-size: 10px!important;
+    width: 90px;
+}
+.desenvolvido-por{text-align: right; }
