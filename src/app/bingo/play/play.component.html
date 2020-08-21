@@ -8,7 +8,7 @@
         </mat-card-header>
 
         <mat-card-content>
-            <h1>232</h1>
+            <h1>{{concurso}}</h1>
         </mat-card-content>
     </mat-card>
 
@@ -19,7 +19,7 @@
         <mat-card-content>
           <section>
             <mat-chip-list aria-label="Fish selection">
-                <strong>Total de: </strong><mat-chip>60</mat-chip><strong> bolas com números de 01 até 60</strong>
+                <strong>Total de: </strong><mat-chip>{{configTotalBolas}}</mat-chip><strong> bolas com números de 01 até 60</strong>
             </mat-chip-list>
           </section>
         </mat-card-content>
@@ -33,7 +33,7 @@
         <mat-card-content>
           <section>
             <mat-chip-list aria-label="Fish selection">
-                <strong>Total de: </strong><mat-chip>50</mat-chip><strong> cartelas </strong>
+                <strong>Total de: </strong><mat-chip>{{configTotalCartelas}}</mat-chip><strong> cartelas </strong>
             </mat-chip-list>
           </section>
         </mat-card-content>
@@ -47,7 +47,7 @@
         <mat-card-content>
           <section>
             <mat-chip-list aria-label="Fish selection">
-                <strong>Total de: </strong><mat-chip>50</mat-chip><strong> participantes </strong>
+                <strong>Total de: </strong><mat-chip>{{configTotalParticipantes}}</mat-chip><strong> participantes </strong>
             </mat-chip-list>
           </section>
         </mat-card-content>
@@ -59,8 +59,8 @@
         </mat-card-header>
 
         <mat-card-content>
-            <h5>O jogo acaba com o primeiro jogador que conseguir acertar 20 bolas.</h5>
-            <h5>Data Início: 22/09/2020 ás 19:00</h5>
+            <h5>O jogo acaba com o primeiro jogador que conseguir acertar {{configGanhaComAcertoDe}} bolas.</h5>
+            <h5>Data Início: {{concursoDate}} ás {{concursoHora}}</h5>
         </mat-card-content>
     </mat-card>
 
@@ -69,41 +69,14 @@
 
 <div fxLayout="row" >
     <div fxFlex="60">
-        <mat-card class="list-dezenas">
-            <mat-card-header>
-                <mat-card-title>1º Dezena de Números Sorteados</mat-card-title>
-            </mat-card-header>
-            <app-ball></app-ball>
-        </mat-card>
-
-        <mat-card  class="list-dezenas">
-            <mat-card-header>
-                <mat-card-title>2º Dezena de Números Sorteados</mat-card-title>
-            </mat-card-header>
-            <app-ball></app-ball>
-        </mat-card>
-
-        <mat-card  class="list-dezenas">
-            <mat-card-header>
-                <mat-card-title>3º Dezena de Números Sorteados</mat-card-title>
-            </mat-card-header>
-            <app-ball></app-ball>
-        </mat-card>
-
-        <mat-card  class="list-dezenas">
-            <mat-card-header>
-                <mat-card-title>4º Dezena de Números Sorteados</mat-card-title>
-            </mat-card-header>
-            <app-ball></app-ball>
-        </mat-card>
-
+        <app-ball></app-ball>
     </div>
 
     <div fxFlex="15" >
 
         <mat-card class="list-dezenas bg-gradiente-block-tree" >
             <mat-card-header>
-                <mat-card-title style="text-align:center;">Total de Bolas Sorteadas <br><h1>30</h1></mat-card-title>
+                <mat-card-title style="text-align:center;">Total de Bolas Sorteadas <br><h1>{{allNumberBalls}}</h1></mat-card-title>
             </mat-card-header>
         </mat-card>
 
@@ -132,7 +105,7 @@
                     <div class="btn-bingo-button-column">
                         <div class="btn-bingo-flex-container">
                         <div class="btn-bingo-button-container">
-                            <button mat-fab color="primary" aria-label="Começar">
+                            <button mat-fab color="primary" aria-label="Começar" id="start-bingo">
                             <mat-icon>play_circle_filled</mat-icon>
                             </button>
                         </div>

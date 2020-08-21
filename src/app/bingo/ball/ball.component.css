@@ -1,6 +1,5 @@
 #balls{
-    display:flex;
-    flex-direction: row;
+    display: flow-root;
 }
 .ball{
     position: relative;

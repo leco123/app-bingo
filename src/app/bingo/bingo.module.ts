@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 
 import { BingoRoutingModule } from './bingo-routing.module';
 import { ConfigComponent } from './config/config.component';
+import { BingoService } from './bingo.service';
 
 
 @NgModule({
@@ -11,7 +12,9 @@ import { ConfigComponent } from './config/config.component';
   imports: [
     CommonModule,
     BingoRoutingModule,
-    MaterialModule,
-  ]
+    MaterialModule
+    
+  ],
+  providers: [BingoService]
 })
 export class BingoModule { }

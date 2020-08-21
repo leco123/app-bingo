@@ -5,14 +5,14 @@
 export const environment = {
   production: false,
   firebaseConfig: {
-    apiKey: "AIzaSyBi7ISt5YDyVWdlNh00ZLlZ267DaeUNJ6M",
-    authDomain: "angular-fireauth-d6b91.firebaseapp.com",
-    databaseURL: "https://angular-fireauth-d6b91.firebaseio.com",
-    projectId: "angular-fireauth-d6b91",
-    storageBucket: "angular-fireauth-d6b91.appspot.com",
-    messagingSenderId: "822599461829",
-    appId: "1:822599461829:web:51c4b2942528ec0333f9ac",
-    measurementId: "G-Q8X0KE0DWC"
+    apiKey: "AIzaSyBuzxwA1_f9EgigKI4qGPHbXlTh2CQ3ku8",
+    authDomain: "app-bingo-af10e.firebaseapp.com",
+    databaseURL: "https://app-bingo-af10e.firebaseio.com",
+    projectId: "app-bingo-af10e",
+    storageBucket: "app-bingo-af10e.appspot.com",
+    messagingSenderId: "221506713227",
+    appId: "1:221506713227:web:ee5e80b11b5943130dc68e",
+    measurementId: "G-NFPDCKW3J2"
   },
   vers: '0.0.10',
   versDate: '21/08/2020'
