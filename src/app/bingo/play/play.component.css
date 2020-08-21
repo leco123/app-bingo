@@ -1,8 +1,29 @@
 .num-concurso{
-    background: #004E99;
-    box-shadow: 4px 7px 9px -36px rgba(0,0,0,0.4);
-    color: #FFF;
     text-align: center;
+}
+
+.bg-gradiente {
+  color: #FFF;
+  background-color: rgba(28,206,234,0.82);
+  background: linear-gradient(-45deg, rgba(147,26,222,0.83) 0%, rgba(28,206,234,0.82) 100%);
+}
+
+.bg-gradiente-block-two {
+  color: #FFF;
+  background: rgb(34,193,195);
+  background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(34,88,173,0.9164040616246498) 100%);
+}
+
+.bg-gradiente-block-tree {
+  color: #FFF;
+  background: rgb(63,94,251);
+  background: linear-gradient(-45deg, rgba(147,26,222,0.83) 0%, rgba(28,206,234,0.82) 100%);
+}
+
+.bg-gradiente-block-for {
+  color: #FFF;
+  background: rgb(238,174,202);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
 }
 
 .mat-card{margin:5px;}

@@ -2,28 +2,44 @@
     <mat-sidenav class="sidenav" mode="side" opened fixedInViewport="true" 
     fixedTopGap="64">
         <mat-nav-list class="nav-list">
-            <a mat-list-item routerLink="/">
+            <a mat-list-item routerLink="/inicio">
                 <i class="material-icons">home</i>
                 Início
             </a>
-            <a mat-list-item routerLink="/config">
+            <a mat-list-item routerLink="/bingo/config">
                 <i class="material-icons">settings</i>
                 Configurações
             </a>
-
-            <a mat-list-item routerLink="/users">
+<!--
+            <button mat-button [matMenuTriggerFor]="menu">
                 <i class="material-icons">people</i>
-                Usuários
-            </a>
+                Usuário
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item routerLink="/auth/register">
+                    <mat-icon>person_add</mat-icon>
+                    Cadastro de Usuário
+                </button>
+                <button mat-menu-item  routerLink="/auth/login">
+                    <mat-icon>login</mat-icon>
+                    Login
+                </button>
+            </mat-menu>
+        -->            
 
-            <a mat-list-item routerLink="/cartel">
+            <!--<a mat-list-item routerLink="/cartel">
                 <i class="material-icons">casino</i>
                 Casino
-            </a>
+            </a>-->
 
             <a mat-list-item routerLink="/bingo/play">
                 <i class="material-icons">sentiment_satisfied_alt</i>
                 Sorteio
+            </a>
+
+            <a mat-list-item routerLink="/notfound-page">
+                <i class="material-icons">warning</i>
+                Notfound
             </a>
 
             <button mat-button color="warn" aria-label="Sair">

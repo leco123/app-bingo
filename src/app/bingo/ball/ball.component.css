@@ -31,13 +31,18 @@
     line-height: 45px;
     font-size: 24px;
     font-weight: bold;
-    background: #fff;
+    background: #ffffffc4;
 }
 /* YOUR COLORS */
-.ball.blue{   background: radial-gradient(circle at 20px 20px, #09f, #001);}
-.ball.red{    background: radial-gradient(circle at 20px 20px, #f30, #001);}
-.ball.green{  background: radial-gradient(circle at 20px 20px, #0f4, #001);}
-.ball.yellow{ background: radial-gradient(circle at 20px 20px, #fc0, #001);}
+.ball.blue{   
+    background: rgb(63,94,251);
+    background: linear-gradient(-45deg, rgba(147,26,222,0.83) 0%, rgba(28,206,234,0.82) 100%);}
+.ball.red{    background: rgb(63,94,251);
+    background: linear-gradient(-45deg, rgba(147,26,222,0.83) 0%, rgba(28,206,234,0.82) 100%);}
+.ball.green{ background: rgb(63,94,251);
+    background: linear-gradient(-45deg, rgba(147,26,222,0.83) 0%, rgba(28,206,234,0.82) 100%);}
+.ball.yellow{ background: rgb(63,94,251);
+    background: linear-gradient(-45deg, rgba(147,26,222,0.83) 0%, rgba(28,206,234,0.82) 100%);}
 .ball.violeta{ background: radial-gradient(circle at 20px 20px, #654EA3, #001);}
 .ball.marrom{ background: radial-gradient(circle at 20px 20px, #E25A44, #001);}
 .ball.verde{ background: radial-gradient(circle at 20px 20px, #019B77, #001);}

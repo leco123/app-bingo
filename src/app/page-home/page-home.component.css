@@ -1,8 +1,5 @@
-.home{
-    background-color: rgb(210 210 210 / 85%);
-    background: linear-gradient(-45deg, rgb(196 196 196 / 0%) 0%, rgb(153 153 153 / 4%) 100%);
+.mat-card{margin:5px;}
 
-}
 .home .title{
     font-size: 3rem;
     font-weight: 300;

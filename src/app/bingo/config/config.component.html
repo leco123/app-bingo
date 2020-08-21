@@ -1,0 +1,93 @@
+
+
+<div fxLayout="column">
+    
+    <mat-card fxFlex="100">
+        <mat-card-header>
+            <mat-card-title>Configurar Regrsas do Jogo</mat-card-title>
+            <mat-card-subtitle>Aqui você pode configurar as principais regras do jogo.</mat-card-subtitle>
+        </mat-card-header>
+    </mat-card>
+
+</div>
+<form>
+    <div fxLayout="row">
+        <mat-card fxFlex="24" >
+            <mat-card-header>
+            <mat-card-title>Cartelas </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <div fxLayout="column" fxLayoutAlign="space-between stretch">
+
+                    <mat-form-field fxFlex="100">
+                        <mat-label>
+                            <mat-icon>dialpad</mat-icon>   Limite de números por cartela?
+                        </mat-label>
+                        <input type="number" matInput value="60">
+                        <span matSuffix>Números(s)</span>
+                        
+                    </mat-form-field>
+
+                    <mat-form-field fxFlex="100">
+                        <mat-label>
+                            <mat-icon>new_releases</mat-icon>  Quantidade mínima de cartela(s) por rodada.
+                        </mat-label>
+                        <input type="number" matInput value="5" >
+                        <span matSuffix>Cartela(s)</span>
+                    </mat-form-field>
+
+                    <mat-form-field fxFlex="105">
+                        <mat-label>
+                            <mat-icon>view_module</mat-icon>  Quantidade máxima de cartela(s) por rodada?
+                        </mat-label>
+                        <input type="number" matInput value="150" >
+                        <span matSuffix>Cartela(s)</span>
+                    </mat-form-field>
+
+                </div>   
+            </mat-card-content>
+        </mat-card>
+
+        <mat-card fxFlex="25" >
+            <mat-card-header>
+            <mat-card-title>Jogo </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <div fxLayout="column" fxLayoutAlign="space-between stretch">
+                    
+                    <mat-form-field fxFlex="100">
+                        <mat-label>
+                            <mat-icon>insert_emoticon</mat-icon> Ganha quem acertar 20 bolas
+                        </mat-label>
+                        <input type="number" matInput value="20">
+                        <span matSuffix>bola(s)</span>
+                    </mat-form-field>
+
+                    
+
+                </div>   
+            </mat-card-content>
+        </mat-card>
+        
+
+        <mat-card fxFlex>
+            <mat-card-header>
+                <mat-card-title>Descrição do Prêmio </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <div fxLayout="column" fxLayoutAlign="space-between stretch">
+                    
+                    <mat-form-field fxFlex="100"  appearance="fill">
+                        <mat-label>
+                            <mat-icon>description</mat-icon> Descrição do Prêmio 
+                        </mat-label>
+                        <textarea matInput placeholder=" Ex. Prêmio para o vencedor é de R$ 6.000,00" ></textarea>
+                    </mat-form-field>
+
+                </div>   
+            </mat-card-content>
+        </mat-card>
+    </div>
+</form>
+
+

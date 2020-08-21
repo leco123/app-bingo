@@ -1,7 +1,7 @@
 
 <div fxLayout="row">
 
-    <mat-card fxFlex="10" class="num-concurso">
+    <mat-card fxFlex="10" class="num-concurso bg-gradiente ">
         
         <mat-card-header>
           <mat-card-title>Concurso</mat-card-title>
@@ -12,7 +12,7 @@
         </mat-card-content>
     </mat-card>
 
-    <mat-card fxFlex="25" >
+    <mat-card fxFlex="25" class="bg-gradiente">
         <mat-card-header>
           <mat-card-title>Bolas </mat-card-title>
         </mat-card-header>
@@ -25,7 +25,7 @@
         </mat-card-content>
     </mat-card>
 
-    <mat-card fxFlex="25">
+    <mat-card fxFlex="15" class="bg-gradiente">
         <mat-card-header>
           <mat-card-title>Cartelas </mat-card-title>
         </mat-card-header>
@@ -39,13 +39,27 @@
         </mat-card-content>
     </mat-card>
 
-    <mat-card fxFlex>
+    <mat-card fxFlex="18" class="bg-gradiente">
+        <mat-card-header>
+          <mat-card-title>Participantes </mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+          <section>
+            <mat-chip-list aria-label="Fish selection">
+                <strong>Total de: </strong><mat-chip>50</mat-chip><strong> participantes </strong>
+            </mat-chip-list>
+          </section>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card fxFlex class="bg-gradiente">
         <mat-card-header>
           <mat-card-title>Regras </mat-card-title>
         </mat-card-header>
 
         <mat-card-content>
-            <h5>O jogo acaba com o primeiro jogador que conseguir acertar as 20 primeiras bolas.</h5>
+            <h5>O jogo acaba com o primeiro jogador que conseguir acertar 20 bolas.</h5>
             <h5>Data Início: 22/09/2020 ás 19:00</h5>
         </mat-card-content>
     </mat-card>
@@ -70,8 +84,8 @@
         </mat-card>
     </div>
 
-    <div fxFlex="15">
-        <mat-card class="list-dezenas">
+    <div fxFlex="15" >
+        <mat-card class="list-dezenas bg-gradiente-block-tree" >
             <mat-card-header>
                 <mat-card-title style="text-align:center;">Total de Bolas Lançadas <br><h1>25</h1></mat-card-title>
                 

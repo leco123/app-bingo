@@ -13,7 +13,12 @@ import { PageHomeComponent } from './page-home/page-home.component';
 import { ColorsDirective } from './directives/colors.directive';
 import { BallComponent } from './bingo/ball/ball.component';
 import { PlayComponent } from './bingo/play/play.component';
-import { CpainelComponent } from './cpainel/cpainel.component';
+import { PagnotfoundComponent } from './pagnotfound/pagnotfound.component';
+import { AuthRoutingModule } from './auth/auth-routing.module';
+import { BingoRoutingModule } from './bingo/bingo-routing.module';
+import { HomeComponent } from './home/home.component';
+import { AuthModule } from './auth/auth.module';
+import { BingoModule } from './bingo/bingo.module';
 
 @NgModule({
   declarations: [
@@ -26,12 +31,17 @@ import { CpainelComponent } from './cpainel/cpainel.component';
     ColorsDirective,
     BallComponent,
     PlayComponent,
-    CpainelComponent
+    PagnotfoundComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
+    AuthModule, 
+    BingoModule,
+    BingoRoutingModule,
+    AuthRoutingModule,
     AppRoutingModule,
   ],
   providers: [],
