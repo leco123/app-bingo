@@ -18,7 +18,7 @@ export class BallComponent implements OnInit {
 
   ngOnInit() {
     this.startBall();
-    this.balls = this.bingoService.getBall(); 
+   // this.balls = this.bingoService.getBall(); 
   }
 
   startBall() {

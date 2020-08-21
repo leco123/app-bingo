@@ -11,21 +11,32 @@ import { Data } from '@angular/router';
 })
 export class PlayComponent implements OnInit {
 
-  allNumberBalls: number = 0;
-  configTotalBolas: number = 60;
-  configTotalCartelas: number = 50;
-  configTotalParticipantes: number = 150;
-  configGanhaComAcertoDe: number = 20;
+  allNumberBalls: number;
+  configTotalBolas: number;
+  configTotalCartelas: number;
+  configTotalParticipantes: number;
+  configGanhaComAcertoDe: number;
 
-  concurso: number = 232;
-  concursoDate: string = '';
-  concursoHora: string = '19:00';
+  concurso: number;
+  concursoDate: string;
+  concursoHora: string;
   constructor(private bingoService: BingoService) { }
 
   ngOnInit() {
+    
     let dt = new Date();
+    this.allNumberBalls = this.bingoService.allNumberBalls;
+    this.configTotalBolas = this.bingoService.configTotalBolas;
+    this.configTotalCartelas = this.bingoService.configTotalCartelas;
+    this.configTotalParticipantes = this.bingoService.configTotalParticipantes;
+    this.configGanhaComAcertoDe = this.bingoService.configGanhaComAcertoDe;
+    this.concurso = this.bingoService.concurso;
     this.concursoDate =  dt.getDate()+'/'+dt.getMonth()+'/'+dt.getFullYear()+''.toString();
+    this.concursoDate = this.bingoService.concursoDate;
+    this.concursoHora = this.bingoService.concursoHora;
+    
     this.allNumberBalls = this.bingoService.getAllBalls();
+
   }
 
 

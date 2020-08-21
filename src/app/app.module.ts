@@ -19,6 +19,9 @@ import { BingoRoutingModule } from './bingo/bingo-routing.module';
 import { HomeComponent } from './home/home.component';
 import { AuthModule } from './auth/auth.module';
 import { BingoModule } from './bingo/bingo.module';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -38,6 +41,9 @@ import { BingoModule } from './bingo/bingo.module';
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
+    AngularFirestoreModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
+    AngularFirestoreModule,
     AuthModule, 
     BingoModule,
     BingoRoutingModule,
