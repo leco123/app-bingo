@@ -25,7 +25,7 @@ export class PlayComponent implements OnInit {
   ngOnInit() {
     
     let dt = new Date();
-    this.allNumberBalls = this.bingoService.allNumberBalls;
+    this.allNumberBalls = this.bingoService.getallNumberBalls();
     this.configTotalBolas = this.bingoService.configTotalBolas;
     this.configTotalCartelas = this.bingoService.configTotalCartelas;
     this.configTotalParticipantes = this.bingoService.configTotalParticipantes;
@@ -34,8 +34,6 @@ export class PlayComponent implements OnInit {
     this.concursoDate =  dt.getDate()+'/'+dt.getMonth()+'/'+dt.getFullYear()+''.toString();
     this.concursoDate = this.bingoService.concursoDate;
     this.concursoHora = this.bingoService.concursoHora;
-    
-    this.allNumberBalls = 16;
 
   }
 
