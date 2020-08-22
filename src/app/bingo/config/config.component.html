@@ -10,7 +10,8 @@
     </mat-card>
 
 </div>
-<form>
+<form role="form" [formGroup]="formConfig" (ngSubmit)="onSubmit()">
+
     <div fxLayout="row">
         <mat-card fxFlex="24" >
             <mat-card-header>
@@ -23,7 +24,7 @@
                         <mat-label>
                             <mat-icon>dialpad</mat-icon>   Limite de números por cartela?
                         </mat-label>
-                        <input type="number" matInput value="60">
+                        <input type="number" matInput  formControlName="numToCard" >
                         <span matSuffix>Números(s)</span>
                         
                     </mat-form-field>
@@ -32,7 +33,7 @@
                         <mat-label>
                             <mat-icon>new_releases</mat-icon>  Quantidade mínima de cartela(s) por rodada.
                         </mat-label>
-                        <input type="number" matInput value="5" >
+                        <input type="number" matInput  formControlName="numMinToCard" >
                         <span matSuffix>Cartela(s)</span>
                     </mat-form-field>
 
@@ -40,7 +41,7 @@
                         <mat-label>
                             <mat-icon>view_module</mat-icon>  Quantidade máxima de cartela(s) por rodada?
                         </mat-label>
-                        <input type="number" matInput value="150" >
+                        <input type="number" matInput  formControlName="numMaxToCard">
                         <span matSuffix>Cartela(s)</span>
                     </mat-form-field>
 
@@ -59,7 +60,7 @@
                         <mat-label>
                             <mat-icon>insert_emoticon</mat-icon> Ganha quem acertar 20 bolas
                         </mat-label>
-                        <input type="number" matInput value="20">
+                        <input type="number" matInput  formControlName="numBallWin">
                         <span matSuffix>bola(s)</span>
                     </mat-form-field>
 
@@ -84,7 +85,13 @@
                         <textarea matInput placeholder=" Ex. Prêmio para o vencedor é de R$ 6.000,00" ></textarea>
                     </mat-form-field>
 
-                </div>   
+                </div>  
+                
+                <div fxLayout="row" fxLayoutAlign="end end" >
+                    <button mat-button color="primary" type="submit" [disabled]="!formConfig.valid">
+                      <mat-icon>done</mat-icon>&nbsp;Salvar
+                    </button>
+                </div>
             </mat-card-content>
         </mat-card>
     </div>

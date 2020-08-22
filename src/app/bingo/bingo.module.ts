@@ -4,18 +4,17 @@ import { CommonModule } from '@angular/common';
 
 import { BingoRoutingModule } from './bingo-routing.module';
 import { ConfigComponent } from './config/config.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { BingoService } from './bingo.service';
-import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [ConfigComponent],
   imports: [
     CommonModule,
-    BingoRoutingModule,
+    MaterialModule,
     ReactiveFormsModule,
-    MaterialModule
-    
+    BingoRoutingModule
   ],
   providers: [BingoService]
 })

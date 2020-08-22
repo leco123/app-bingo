@@ -15,19 +15,13 @@ export class BallComponent implements OnInit {
 
 
   constructor(private bingoService: BingoService) {
-    // subscribe to home component messages
-    this.subscription = this.bingoService.getBalls().subscribe(balls => {
-      if (balls) {
-        this.startBall();
-      } else {
-        // clear messages when empty message received
-        this.balls = [];
-      }
-    });
+    //this.startBall();
   }
 
   ngOnInit() {
-    this.startBall();
+
+    
+    
    // this.balls = this.bingoService.getBall(); 
   }
 
@@ -41,11 +35,31 @@ export class BallComponent implements OnInit {
         classcss: 'blue'
       };
       console.log(i);
-      this.bingoService.addBall(b);
+
+      const observable = this.bingoService.addBall(b);
+      
+      this.subscription = observable.subscribe(
+        valor => {
+          console.log("====> valor");
+          this.balls.push(valor);
+        },
+        erro => {
+          console.log("====> error");
+          this.balls.push(erro);
+        },
+        () => {
+          console.log("O observable foi encerrado!");
+          //this.balls.push("O observable foi encerrado!");
+        });
       
     }
 
   }
+
+  submit(){
+
+  }
+  
 
  
 }

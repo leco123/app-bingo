@@ -12,7 +12,7 @@ export class BingoService {
   
 
   //private ball$: Observable<Ball>;
-  private bolas$ = new Subject<any>();
+  private bolas$: Observable<Ball>;
   //private bolas: Ball[] = [];
 
   allNumberBalls: number = 0;
@@ -30,14 +30,16 @@ export class BingoService {
     console.log('Carregou serviço BingoService ');
   }
 
-  getBalls(): Observable<Ball[]> {
-    return this.bolas$.asObservable();
+  
+
+  addBall(b: Ball): Observable<Ball> {
+    return new Observable<Ball>(observador => {
+      setTimeout(() => {
+        observador.next(b);
+      }, 3000);
+    });
+
   }
 
-  addBall(b: Ball) {
-    
-    this.bolas$.next({b});
-      
-  }
 
 }

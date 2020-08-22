@@ -11,6 +11,10 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2015",
+    "noEmitOnError": true, // indicará para nós que estamos tentando acessar uma propriedade com modificador de acesso privado
+    "noImplicitAny": true,
+    "removeComments": true,  // remover comentário em production         
+    //"strictNullChecks": true,     // não pode usar config undefined ou null
     "typeRoots": [
       "node_modules/@types"
     ],

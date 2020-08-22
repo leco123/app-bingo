@@ -1,9 +1,12 @@
-import { AuthService } from './auth/auth.service';
+import { AuthModule } from './auth/auth.module';
+import { AppRoutingModule } from './app-routing.module';
+import { BingoRoutingModule } from './bingo/bingo-routing.module';
+import { AuthRoutingModule } from './auth/auth-routing.module';
+
 import { environment } from './../environments/environment';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
@@ -16,16 +19,13 @@ import { ColorsDirective } from './directives/colors.directive';
 import { BallComponent } from './bingo/ball/ball.component';
 import { PlayComponent } from './bingo/play/play.component';
 import { PagnotfoundComponent } from './pagnotfound/pagnotfound.component';
-import { AuthRoutingModule } from './auth/auth-routing.module';
-import { BingoRoutingModule } from './bingo/bingo-routing.module';
 import { HomeComponent } from './home/home.component';
-import { AuthModule } from './auth/auth.module';
-import { BingoModule } from './bingo/bingo.module';
+
 import { AngularFireModule } from '@angular/fire';
-import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { BingoService } from './bingo/bingo.service';
 import { ReactiveFormsModule } from '@angular/forms';
+import {AngularFireDatabaseModule} from '@angular/fire/database';
+import { BingoModule } from './bingo/bingo.module';
 
 @NgModule({
   declarations: [
@@ -47,13 +47,16 @@ import { ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule, 
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
-    AuthModule, 
+    AngularFireDatabaseModule,
+    MaterialModule,
+    AuthModule,
     BingoModule,
-    BingoRoutingModule,
     AuthRoutingModule,
-    AppRoutingModule,
+    BingoRoutingModule,
+    AppRoutingModule
+    
   ],
-  providers: [AuthService, BingoService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
