@@ -35,7 +35,7 @@ export class PlayComponent implements OnInit {
     this.concursoDate = this.bingoService.concursoDate;
     this.concursoHora = this.bingoService.concursoHora;
     
-    this.allNumberBalls = this.bingoService.getAllBalls();
+    this.allNumberBalls = 16;
 
   }
 

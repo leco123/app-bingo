@@ -1,16 +1,18 @@
 import { Ball } from './../model/ball';
-import { Observable, Observer } from 'rxjs';
+import { Observable, Subject, Observer } from 'rxjs';
 import { map, toArray, delay } from 'rxjs/operators';
 import { Injectable } from '@angular/core';
-import { BingoModule } from './bingo.module';
+import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class BingoService {
+  
 
   //private ball$: Observable<Ball>;
-  bolas: Observable<Ball[]>;
+  private bolas$ = new Subject<any>();
   //private bolas: Ball[] = [];
 
   allNumberBalls: number = 0;
@@ -23,36 +25,19 @@ export class BingoService {
   concursoDate: string = '';
   concursoHora: string = '19:00';
 
-  constructor() { 
+  constructor(private afs: AngularFirestore) { 
     //this.ball$ = Math.round(Math.random() * 20 );
     console.log('Carregou serviço BingoService ');
   }
 
-  getBall(): Observable<Ball[]> {
-    return this.bolas;
+  getBalls(): Observable<Ball[]> {
+    return this.bolas$.asObservable();
   }
 
-  addNewBall(ball: Ball) {
-/*
-    let o: Observable<Ball>((observer: Observer<Ball[]>) => {
-
-      setInterval(() => {
-        console.log('add new ball');
-        console.log(ball);
-        observer.next(ball[0]);
-      }, 3000)
-
-      observer.complete();
-      console.log('observer complente...');
-
-    });
-*/
-    //this.bolas.push(ball);
-
-  }
-  
-  getAllBalls() {
-    return 10;
+  addBall(b: Ball) {
+    
+    this.bolas$.next({b});
+      
   }
 
 }

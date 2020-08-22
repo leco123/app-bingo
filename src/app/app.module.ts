@@ -1,3 +1,5 @@
+import { AuthService } from './auth/auth.service';
+import { environment } from './../environments/environment';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -22,6 +24,8 @@ import { BingoModule } from './bingo/bingo.module';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { BingoService } from './bingo/bingo.service';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -40,9 +44,8 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MaterialModule,
-    AngularFirestoreModule.initializeApp(environment.firebaseConfig),
-    AngularFireAuthModule,
+    ReactiveFormsModule, 
+    AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
     AuthModule, 
     BingoModule,
@@ -50,7 +53,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     AuthRoutingModule,
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [AuthService, BingoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

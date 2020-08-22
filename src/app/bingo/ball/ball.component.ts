@@ -1,6 +1,6 @@
 import { Ball } from './../../model/ball';
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 import { BingoService } from '../bingo.service';
 
 @Component({
@@ -11,10 +11,20 @@ import { BingoService } from '../bingo.service';
 export class BallComponent implements OnInit {
 
   balls: Ball[];
-  
+  subscription: Subscription;
 
 
-  constructor(private bingoService: BingoService) {}
+  constructor(private bingoService: BingoService) {
+    // subscribe to home component messages
+    this.subscription = this.bingoService.getBalls().subscribe(balls => {
+      if (balls) {
+        this.startBall();
+      } else {
+        // clear messages when empty message received
+        this.balls = [];
+      }
+    });
+  }
 
   ngOnInit() {
     this.startBall();
@@ -31,7 +41,7 @@ export class BallComponent implements OnInit {
         classcss: 'blue'
       };
       console.log(i);
-      this.bingoService.addNewBall(b);
+      this.bingoService.addBall(b);
       
     }
 
