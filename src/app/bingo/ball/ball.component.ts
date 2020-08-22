@@ -15,12 +15,12 @@ export class BallComponent implements OnInit {
 
 
   constructor(private bingoService: BingoService) {
-    //this.startBall();
+    
   }
 
   ngOnInit() {
 
-    
+    this.startBall();
     
    // this.balls = this.bingoService.getBall(); 
   }

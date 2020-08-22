@@ -36,8 +36,11 @@ export class BingoService {
     return new Observable<Ball>(observador => {
       setTimeout(() => {
         observador.next(b);
+        
       }, 3000);
+      observador.complete();
     });
+    
 
   }
 

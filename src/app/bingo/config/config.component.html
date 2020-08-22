@@ -87,14 +87,24 @@
 
                 </div>  
                 
-                <div fxLayout="row" fxLayoutAlign="end end" >
-                    <button mat-button color="primary" type="submit" [disabled]="!formConfig.valid">
-                      <mat-icon>done</mat-icon>&nbsp;Salvar
-                    </button>
-                </div>
+                
             </mat-card-content>
         </mat-card>
+
+        
     </div>
+    <mat-card>
+        <div fxLayout="row" fxLayoutAlign="end end" >
+
+            <button mat-button color="warn" type="submit" [disabled]="!formConfig.valid">
+                <mat-icon>false</mat-icon>&nbsp;Cancelar
+              </button>
+
+            <button mat-button color="primary" type="submit" [disabled]="!formConfig.valid">
+              <mat-icon>done</mat-icon>&nbsp;Salvar
+            </button>
+        </div>
+    </mat-card>
 </form>
 
 
