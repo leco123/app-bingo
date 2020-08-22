@@ -101,7 +101,6 @@ export class BallComponent implements OnInit {
 
   ngOnInit() {
     for (let i = 0; i <= 120; i++) {
-      this.bingoService.atualizarNumBall(i);
       this.generateBalls(); 
     }
     
@@ -142,6 +141,7 @@ export class BallComponent implements OnInit {
   }, Object.create(null));
 
   this.pedras = values;
+  this.bingoService.atualizarNumBall(this.pedras.length);
   this.cantarPedras();
   }
 
