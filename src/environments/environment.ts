@@ -14,7 +14,7 @@ export const environment = {
     appId: "1:221506713227:web:ee5e80b11b5943130dc68e",
     measurementId: "G-NFPDCKW3J2"
   },
-  vers: '0.0.13',
+  vers: '0.0.19',
   versDate: '21/08/2020'
 };
 
