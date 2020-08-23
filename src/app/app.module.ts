@@ -26,6 +26,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { ReactiveFormsModule } from '@angular/forms';
 import {AngularFireDatabaseModule} from '@angular/fire/database';
 import { BingoModule } from './bingo/bingo.module';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { BingoModule } from './bingo/bingo.module';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
     AngularFireDatabaseModule,
+    AngularFireAuthModule,
     MaterialModule,
     AuthModule,
     BingoModule,

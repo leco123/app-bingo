@@ -152,7 +152,7 @@ export class BallComponent implements OnInit {
   }
 
   showAudio(ball: Ball) {
-    responsiveVoice.speak(ball.cantarpedra.toString(), 'Brazilian Portuguese Female', {volume: 100});
+    // responsiveVoice.speak(ball.cantarpedra.toString(), 'Brazilian Portuguese Female', {volume: 100});
   }
 
   pedra(ball: Ball): Ball {
@@ -160,7 +160,7 @@ export class BallComponent implements OnInit {
     ball.cantarpedra = val.texto.toString();  
     return ball;   
   }
-
+/*
   pauseCantarPedra() {
     responsiveVoice.pause();
     responsiveVoice.speak('Pessoal Atenção,    Por favor pessoal pesso a Atenção de todos,     vamos fazer uma parada.    Aproveitem para comprarem suas pipócas, refrigerantes e não pode faltar a cerveja. Voltaremos em alguns Minutos ', 'Brazilian Portuguese Female', {volume: 100});
@@ -179,7 +179,7 @@ export class BallComponent implements OnInit {
     responsiveVoice.speak('agradeço pela coompreensão de todos, Obrigada!', 'Brazilian Portuguese Female', {volume: 100});
     responsiveVoice.cancel();
   }
-
+*/
   novoObservable(b: Ball): Observable<Ball> {
     return new Observable<Ball>(observador => {
         setTimeout(() => {
