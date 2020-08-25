@@ -24,13 +24,19 @@
           
 
             <mat-card class="login-card mat-elevation-z8" >
-                
+              <mat-icon class="fontIcon" color="primary">lock_outline</mat-icon>
                 <mat-card-content fxLayout="column" *ngIf="!loading">
                   <mat-form-field >
+                    <mat-placeholder>
+                      <mat-icon>email</mat-icon> E-mail
+                    </mat-placeholder>
                     <input matInput formControlName="email" type="email"
                         placeholder="E-mail" autocomplete="email" readonly="false">
                   </mat-form-field>
                   <mat-form-field>
+                    <mat-placeholder>
+                      <mat-icon>lock_outline</mat-icon> Senha
+                    </mat-placeholder>
                     <input matInput formControlName="password" type="password"  
                       placeholder="Password" autocomplete="password">
                   </mat-form-field>

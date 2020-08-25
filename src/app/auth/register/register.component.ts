@@ -60,7 +60,8 @@ states = ['PR','RS','SC','SP','RJ'];
       state: this.formRegister.value.state,
       phone: this.formRegister.value.phone,
       mobilephone: this.formRegister.value.mobilephone,
-      email: this.formRegister.value.email
+      email: this.formRegister.value.email,
+      password: this.formRegister.value.password1
     };
 
     this.authService.register(newUser)

@@ -55,6 +55,14 @@
             </mat-card-header>
             <mat-card-content>
                 <div fxLayout="column" fxLayoutAlign="space-between stretch">
+
+                    <mat-form-field fxFlex="100">
+                        <mat-label>
+                            <mat-icon>insert_emoticon</mat-icon> Concurso
+                        </mat-label>
+                        <input type="number" matInput  formControlName="numConcurso">
+                        <span matSuffix>Concurso</span>
+                    </mat-form-field>
                     
                     <mat-form-field fxFlex="100">
                         <mat-label>
@@ -82,7 +90,7 @@
                         <mat-label>
                             <mat-icon>description</mat-icon> Descrição do Prêmio 
                         </mat-label>
-                        <textarea matInput placeholder=" Ex. Prêmio para o vencedor é de R$ 6.000,00" ></textarea>
+                        <textarea formControlName="confiDesc" matInput placeholder=" Ex. Prêmio para o vencedor é de R$ 6.000,00" ></textarea>
                     </mat-form-field>
 
                 </div>  

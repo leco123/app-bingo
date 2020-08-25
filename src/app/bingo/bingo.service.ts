@@ -1,3 +1,4 @@
+import { Config } from 'protractor';
 import { Ball } from './../model/ball';
 import { Observable, Subject, Observer, Subscription } from 'rxjs';
 import { map, toArray, delay } from 'rxjs/operators';
@@ -9,6 +10,8 @@ import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/fire
   providedIn: 'root'
 })
 export class BingoService {
+
+  private userCollection: AngularFirestoreCollection<Config> = this.afs.collection('config');
   
   balls: Ball[] = [];
   inscricaoObservable: Subscription;
@@ -35,5 +38,9 @@ export class BingoService {
   getallNumberBalls():number {
     return this.allNumberBalls;
   }
+/*
+  register(config: Config): Observable<Config> {
+
+  }*/
 
 }

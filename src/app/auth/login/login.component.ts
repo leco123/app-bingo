@@ -69,7 +69,7 @@ export class LoginComponent implements OnInit {
       .subscribe(
         (u) => {
           this.loginOkNotification(u);
-          this.router.navigateByUrl('/');
+          this.router.navigateByUrl('/inicio');
           this.loading = false;
         },
         (err) => {
