@@ -16,8 +16,6 @@ import { BottomComponent } from './template/bottom/bottom.component';
 import { CenterComponent } from './template/center/center.component';
 import { PageHomeComponent } from './page-home/page-home.component';
 import { ColorsDirective } from './directives/colors.directive';
-import { BallComponent } from './bingo/ball/ball.component';
-import { PlayComponent } from './bingo/play/play.component';
 import { PagnotfoundComponent } from './pagnotfound/pagnotfound.component';
 import { HomeComponent } from './home/home.component';
 
@@ -37,8 +35,6 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
     CenterComponent,
     PageHomeComponent,
     ColorsDirective,
-    BallComponent,
-    PlayComponent,
     PagnotfoundComponent,
     HomeComponent
   ],

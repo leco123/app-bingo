@@ -20,7 +20,12 @@ export class PlayComponent implements OnInit {
   concurso: number;
   concursoDate: string;
   concursoHora: string;
-  constructor(private bingoService: BingoService) { }
+
+  balls: Ball[] = [];
+
+  constructor(private bingoService: BingoService) {
+    
+   }
 
   ngOnInit() {
     
@@ -34,6 +39,22 @@ export class PlayComponent implements OnInit {
     this.concursoDate =  dt.getDate()+'/'+dt.getMonth()+'/'+dt.getFullYear()+''.toString();
     this.concursoDate = this.bingoService.concursoDate;
     this.concursoHora = this.bingoService.concursoHora;
+
+  }
+
+  onPlay(){
+
+    for (let i = 0; i <= 59; i++) {
+        let b: Ball = {
+          numero: Math.round(Math.random() * 60 ),
+          cantarpedra: 'Cantar da Pedra',
+          classcss: 'blue'
+        };
+
+        if(b.numero <= 60 && b.numero > 0)
+          this.bingoService.addBalls(b); 
+
+    }
 
   }
 
